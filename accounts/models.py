@@ -43,6 +43,7 @@ class Account(AbstractBaseUser):
     username  = models.CharField(max_length=50, unique=True)
     email  = models.EmailField(max_length=50, unique=True)
     password  = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=13, default="0722247453")
 
     # required fields
     date_join = models.DateTimeField(auto_now_add=True)
