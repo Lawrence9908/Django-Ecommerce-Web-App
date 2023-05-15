@@ -5,4 +5,11 @@ from . import views
 urlpatterns = [
     path('register/', views.register, name="register"),
     path('login/', views.login, name="login"),
+    path('logout/', views.logout, name="logout"),
+    path('dashboard/', views.dashboard, name="dashboard"),
+    path('', views.dashboard, name="dashboard"),
+    path('forgotPassword/', views.forgotPassword, name="forgotPassword"), #forgot password
+    path('activate/<uidb64>/<token>/', views.activate, name="activate"),# activate email
+    path('resetpassword_validate/<uidb64>/<token>/', views.resetpassword_validate, name="resetpassword_validate"),# activate email
+    path('resetPassword/', views.resetPassword, name="resetPassword"),
 ]
